@@ -34,6 +34,8 @@ steps:
     configuration: '$(buildConfiguration)'
 - task: AzureRmWebAppDeployment@4
   inputs:
-    ConnectedServiceName: ''
-    WebAppName: 
-    Package: '$(build.artifactstagingdirectory)/*.zip'
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'STM - Internal Consumption(bd292303-d8c7-4fca-b7b2-af7c5e0878e6)'
+    appType: 'webApp'
+    WebAppName: 'AppInsightsDemo-STM'
+    packageForLinux: '$(build.artifactstagingdirectory)/*.zip'
