@@ -37,7 +37,7 @@ namespace PartsUnlimited.Controllers
             {
                 if(categoryId == 5)
                 {
-                    throw new Exception("Intentionally throwing an error for the Oil category (5).")
+                    throw new Exception("Intentionally throwing an error for the Oil category (5).");
                 }
                 // Retrieve Category genre and its Associated associated Products products from database
                 var genreModel = db.Categories.Include("Products").Single(g => g.CategoryId == categoryId);
