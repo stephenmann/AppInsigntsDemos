@@ -12,10 +12,12 @@ namespace PartsUnlimited.Controllers
     public class StoreController : Controller
     {
         private readonly IPartsUnlimitedContext db;
+        private readonly ITelemetryProvider telemetryProvider;
 
-        public StoreController(IPartsUnlimitedContext context)
+        public StoreController(IPartsUnlimitedContext context, ITelemetryProvider provider)
         {
             db = context;
+            telemetryProvider = provider;
         }
 
         //
@@ -31,10 +33,23 @@ namespace PartsUnlimited.Controllers
         // GET: /Store/Browse?genre=Disco
         public ActionResult Browse(int categoryId)
         {
-            // Retrieve Category genre and its Associated associated Products products from database
-            var genreModel = db.Categories.Include("Products").Single(g => g.CategoryId == categoryId);
+            try
+            {
+                if(categoryId == 5)
+                {
+                    throw new Exception("Intentionally throwing an error for the Oil category (5).")
+                }
+                // Retrieve Category genre and its Associated associated Products products from database
+                var genreModel = db.Categories.Include("Products").Single(g => g.CategoryId == categoryId);
 
-            return View(genreModel);
+                return View(genreModel);
+            }
+            catch(Exception ex)
+            {
+                telemetryProvider.TrackException(ex);
+                return View();
+            }
+
         }
 
         public ActionResult Details(int id)
