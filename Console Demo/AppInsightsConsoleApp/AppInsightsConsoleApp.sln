@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppInsightsConsoleApp", "AppInsightsConsoleApp\AppInsightsConsoleApp.csproj", "{5D760161-3778-4222-A87E-F11275AE6AE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppInsightsWebApi", "AppInsightsWebApi\AppInsightsWebApi.csproj", "{C15F22C3-A746-4E19-90E0-9473046712B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D760161-3778-4222-A87E-F11275AE6AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D760161-3778-4222-A87E-F11275AE6AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D760161-3778-4222-A87E-F11275AE6AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D760161-3778-4222-A87E-F11275AE6AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15F22C3-A746-4E19-90E0-9473046712B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15F22C3-A746-4E19-90E0-9473046712B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15F22C3-A746-4E19-90E0-9473046712B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15F22C3-A746-4E19-90E0-9473046712B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3577B6DD-AA11-41F2-B0A6-5E07F54FCA73}
+	EndGlobalSection
+EndGlobal
